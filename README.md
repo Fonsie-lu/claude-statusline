@@ -65,6 +65,17 @@ Edit `statusline-command.sh`:
 - **Time formats** — change the `+%H:%M` (5-hour) and `+%d.%m` (7-day) `date` formats.
 - **Separator** — edit the `SEP` variable.
 
+## biha-sn-refactor skill
+
+This repo also backs up the `biha-sn-refactor` Claude Code skill (`skills/biha-sn-refactor/SKILL.md`). It refactors a ServiceNow script (Script Include, Business Rule, client script, UI Action and similar) to the BitHawk coding standard: ES12 syntax, aggressive comment pruning, buffered and muted info logging, and a final `eslint --fix` pass. It builds on the `biha-sn-coding` skill, which is not part of this repo.
+
+The skill refactors the file open in VS Code. When no editor notice names it, the skill runs `open-editor-files.py`, which reads VS Code's persisted workspace state and lists the open files. Install both files in the same skill directory:
+
+```bash
+mkdir -p ~/.claude/skills/biha-sn-refactor
+cp skills/biha-sn-refactor/SKILL.md open-editor-files.py ~/.claude/skills/biha-sn-refactor/
+```
+
 ## License
 
 MIT
