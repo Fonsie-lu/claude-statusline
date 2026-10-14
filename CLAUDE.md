@@ -19,7 +19,7 @@ Test by piping a sample payload:
 
 ```bash
 echo '{"context_window":{"used_percentage":34},"rate_limits":{"five_hour":{"used_percentage":62,"resets_at":1760450000},"seven_day":{"used_percentage":81,"resets_at":1760900000}}}' \
-  | bash skills/biha-sn-refactor/statusline-command.sh
+  | bash statusline-command.sh
 ```
 
 Keep `README.md` in sync when changing bar width, thresholds (50 / 75), glyphs or date formats — it documents all of them.
